@@ -10,6 +10,8 @@ mkdir -p "$cwd/rootfs_debian_nfs"
 
 curl -L -o rootfs.tar.gz https://github.com/jowens25/novus-5.4.85-1.0/raw/main/rootfs.tar.gz
 
+sudo tar xzvf "$cwd/rootfs.tar.gz" -C "$cwd/rootfs_debian_nfs"
+
 sudo apt-get install nfs-kernel-server
 sudo apt install tftpd-hpa
 
