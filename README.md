@@ -34,3 +34,7 @@ cd ~/novus-net-flash
 ./setup-server.sh
 
 Follow instructions in the script
+
+Troubleshooting:
+
+- Watch the debug console for timeouts and host selection (usually a network or image issue) -> re-run setup script -> re-run product environment setup steps.
