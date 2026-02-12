@@ -6,7 +6,7 @@ Prerequisites:
 
 - a linux machine (tested on ubuntu 24.04)
   
-- a serial connection to the product
+- a connection to the debug port of the product (use putty or similar)
   
 Use this script to reflash novus systems with our novus-5.4.85-1.0 image via ethernet
 
