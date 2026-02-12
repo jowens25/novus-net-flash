@@ -4,8 +4,6 @@ NOVUS-NET-FLASH
 
 Prerequisites: 
 
-You will need:
-
 - a linux machine (tested on ubuntu 24.04)
   
 - a serial connection to the product
