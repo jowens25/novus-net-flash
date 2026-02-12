@@ -1,15 +1,23 @@
 # Novus Power Products Network Flash
 
-novus-net-flash
+NOVUS-NET-FLASH
 
-Use this script to reflash system images over network
+Prerequisites: 
 
-This script flashes our novus-5.4.85-1.0 image and was tested on ubuntu 24.04 only
+You will need:
 
-Run: 
+- a linux machine (tested on ubuntu 24.04)
+  
+- a serial connection to the product
+  
+Use this script to reflash novus systems with our novus-5.4.85-1.0 image via ethernet
+
+Run the following: 
 
 git clone https://github.com/jowens25/novus-net-flash.git
 
 cd ~/novus-net-flash
 
 ./setup-server.sh
+
+Follow instructions from the script
