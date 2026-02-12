@@ -26,13 +26,13 @@ Prerequisites:
 Use this script to reflash novus systems with our novus-5.4.85-1.0 image via ethernet
 
 Run the following on the linux (host) machine: 
-
+```
 git clone https://github.com/jowens25/novus-net-flash.git
 
 cd ~/novus-net-flash
 
 ./setup-server.sh
-
+```
 Follow instructions in the script
 
 Troubleshooting:
