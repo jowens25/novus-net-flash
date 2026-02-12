@@ -9,12 +9,15 @@ echo "Setting up in... $cwd"
 mkdir -p "$cwd/rootfs"
 
 curl -L -o rootfs.tar.gz https://github.com/jowens25/novus-5.4.85-1.0/raw/main/rootfs.tar.gz
+echo "Finished download..."
 
 sudo tar xzvf "$cwd/rootfs.tar.gz" -C "$cwd/rootfs"
+echo "Finished unpacking..."
 
 sudo apt-get install nfs-kernel-server -y -qq > /dev/null 2>&1
 sudo apt install tftp-hpa -y -qq > /dev/null 2>&1
 sudo apt install tftpd-hpa -y -qq > /dev/null 2>&1
+echo "Finished installing servers..."
 
 echo "Configuring NFS export..."
 sudo tee /etc/exports > /dev/null <<EOF
@@ -30,14 +33,15 @@ TFTP_ADDRESS="0.0.0.0:69"
 TFTP_OPTIONS="--secure --create --verbose"
 EOF
 
-
+echo "Finished configuration..."
 
 sudo mkdir -p "$cwd/tftpboot"
 sudo chmod -R 777 "$cwd/tftpboot"
 sudo cp "$cwd"/rootfs/boot/*.dtb "$cwd"/tftpboot
 sudo cp "$cwd/rootfs/boot/Image.gz" "$cwd/tftpboot"
 
-#echo "Restarting nfs and tftpd..."
+
+echo "Restarting nfs and tftpd..."
 sudo /etc/init.d/nfs-kernel-server restart
 sudo /etc/init.d/tftpd-hpa restart
 
